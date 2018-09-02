@@ -58,13 +58,7 @@ To replace a checkbox with toggles just add the `data-toggle="toggle"` attribute
 <input type="checkbox" checked data-toggle="toggle">
 ```
 
-Remember: this kind of initialization does not seem to be compatible to [Turbolinks](). If you use Turbolinks you should manually initialize with JavaScript and also attach the `page:change` event fired by Turbolinks, e.g.:
-
-```javascript
-$(document).on('ready page:change', function() {
-  $('input[type="checkbox"].toggle').bootstrapToggle(); // assumes the checkboxes have the class "toggle"
-});
-```
+This version is now compatible with turbolinks.
 
 For more documentation see [bootstraptoggle.com](http://www.bootstraptoggle.com/) or their [Github project](https://github.com/minhur/bootstrap-toggle/).
 
