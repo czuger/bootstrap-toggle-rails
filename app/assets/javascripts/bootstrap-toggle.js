@@ -24,8 +24,8 @@
     Toggle.DEFAULTS = {
         on: 'On',
         off: 'Off',
-        onstyle: 'primary',
-        offstyle: 'secondary',
+        onstyle: 'secondary',
+        offstyle: 'light',
         size: 'normal',
         style: '',
         width: null,
