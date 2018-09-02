@@ -172,7 +172,7 @@
     // })
 
     $(document).on('ready turbolinks:load', function() {
-        $('input[type=checkbox].bootstrap-toggle').bootstrapToggle()
+        $('input[type=checkbox][data-toggle^=toggle]').bootstrapToggle()
     });
 
     $(document).on('click.bs.toggle', 'div[data-toggle^=toggle]', function(e) {

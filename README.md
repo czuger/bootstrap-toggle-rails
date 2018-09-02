@@ -54,8 +54,8 @@ or in case of Bootstrap 2:
 
 To replace a checkbox with toggles just add the `data-toggle="toggle"` attribute to the checkbox, e.g.:
 
-```html
-<input type="checkbox" checked data-toggle="toggle">
+```haml
+= check_box_tag :test, 1, false, 'data-toggle' => 'toggle'
 ```
 
 This version is now compatible with turbolinks.
