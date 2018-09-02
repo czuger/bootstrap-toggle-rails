@@ -25,7 +25,7 @@
         on: 'On',
         off: 'Off',
         onstyle: 'primary',
-        offstyle: 'default',
+        offstyle: 'secondary',
         size: 'normal',
         style: '',
         width: null,
@@ -56,7 +56,7 @@
             .addClass(this._onstyle + ' ' + size)
         var $toggleOff = $('<label class="btn">').html(this.options.off)
             .addClass(this._offstyle + ' ' + size + ' active')
-        var $toggleHandle = $('<span class="toggle-handle btn btn-default">')
+        var $toggleHandle = $('<span class="toggle-handle btn btn-light">')
             .addClass(size)
         var $toggleGroup = $('<div class="toggle-group">')
             .append($toggleOn, $toggleOff, $toggleHandle)
@@ -167,9 +167,13 @@
     // TOGGLE DATA-API
     // ===============
 
-    $(function() {
+    // $(function() {
+    //     $('input[type=checkbox][data-toggle^=toggle]').bootstrapToggle()
+    // })
+
+    $(document).on('ready page:change', function() {
         $('input[type=checkbox][data-toggle^=toggle]').bootstrapToggle()
-    })
+    });
 
     $(document).on('click.bs.toggle', 'div[data-toggle^=toggle]', function(e) {
         var $checkbox = $(this).find('input[type=checkbox]')
