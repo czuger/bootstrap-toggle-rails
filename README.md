@@ -6,25 +6,25 @@
 
 `bootstrap-toggle-rails` is an unofficial gem which integrates this Bootstrap plugin with the Rails asset pipeline.
 
+This version is a fork of the original version which works with Bootstrap 4 and Turbolinks.
+
+Compatibility with Bootstrap 2 and 3 has been removed.
+
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'bootstrap-toggle-rails'
+gem 'bootstrap-toggle-rails', :git => 'https://github.com/czuger/bootstrap-toggle-rails'
 ```
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install bootstrap-toggle-rails
-
 ## Usage
 
-To load the required assets in your application add the appropriate line to your application.js/application.css (depending on whether you use Bootstrap in version 3 or 2):
+To load the required assets in your application add the appropriate line to your application.js/application.css :
 
 `app/assets/javascripts/application.js`:
 
@@ -32,22 +32,10 @@ To load the required assets in your application add the appropriate line to your
 //= require bootstrap-toggle
 ```
 
-or in case of Bootstrap 2:
-
-```javascript
-//= require bootstrap2-toggle
-```
-
 `app/assets/stylesheets/application.css`:
 
 ```
 *= require bootstrap-toggle
-```
-
-or in case of Bootstrap 2:
-
-```
-*= require bootstrap2-toggle
 ```
 
 ### Initialization
